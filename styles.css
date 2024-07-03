@@ -301,7 +301,7 @@ body {
   }
 
   .details-container {
-    height: 2000px;
+    height: 2080px;
     width: 700px;
     position: absolute;
     top: 0;
@@ -410,7 +410,7 @@ body {
 }
 
 .skills-details-container{
-  height: 550px;
+  height: 630px;
   width: 700px;
   margin-top: 40px;
   background-color: rgb(255, 255, 255);
@@ -466,9 +466,9 @@ body {
 }
 
 .last-container{
-  height: 250px;
+  height: 270px;
   width: 700px;
-  margin-top: 80px;
+  margin-top: 150px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
   border-radius: 5px;
