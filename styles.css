@@ -502,7 +502,7 @@ body {
 
 
 .project-details-container{
-  height: 2000px;
+  height: 1600px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -514,13 +514,13 @@ body {
   background-color: rgb(230, 218, 206);
   display: grid;
   grid-template-columns: 750px;
-  grid-auto-rows: 100px 200px 100px 1500px;
+  grid-auto-rows: 100px 200px 10px 1100px;
   justify-content: center; 
   align-items: center;
 }
 
 .empty-2{
-  height: 100px;
+  height: 50px;
   width: 100%;
   display: block;
   top: 0;
@@ -531,7 +531,7 @@ body {
 }
 
 .project-heading{
-  margin-top: 70px;
+  margin-top: 30px;
   text-align: center;
   background-color: transparent;
 }
@@ -544,21 +544,21 @@ body {
 }
 
 .main-project-container{
-  height: 1500px;
+  height: 1000px;
   width: 100%;
   background-attachment: scroll;
   background-clip: border-box;
   background-color: transparent;
   display: grid;
   grid-template-columns: 750px;
-  grid-auto-rows: 500px 500px 500px;
+  grid-auto-rows: 600px 500px;
   justify-content: center; 
   align-items: center;
 }
 
 
 .project-1{
-  height: 400px;
+  height: 470px;
   width: 750px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
@@ -568,7 +568,7 @@ body {
 }
 
 .project-2{
-  height: 400px;
+  height: 470px;
   width: 750px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
@@ -577,18 +577,10 @@ body {
   grid-template-columns: 450px 300px;
 }
 
-.project-3{
-  height: 400px;
-  width: 750px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(138, 131, 124, 0.23) -11.31px 11.31px 17px 0px;
-  border-radius: 5px;
-  display: grid;
-  grid-template-columns: 450px 300px;
-}
+
 
 .project-img{
-  height: 400px;
+  height: 470px;
   width: 300px;
 }
 
@@ -598,6 +590,61 @@ body {
   display: grid;
   grid-template-rows: 50px 50px 300px;
 }
+
+.form-container-1 {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 0;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+.form-group-1 {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+input {
+  width: 100%;
+  height: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  padding: 4px 10px;
+  background-color: rgb(0, 80, 255);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 0%;
+}
+
+.submit-btn:hover {
+  background-color: #ffffff;
+  color: rgb(0, 80, 255);
+  border-color: rgb(0, 0, 0);
+  transition-duration: .5s;
+}
+
 
 .phs{
   height: 400px;
