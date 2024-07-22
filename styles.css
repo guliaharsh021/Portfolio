@@ -609,6 +609,16 @@ body {
   box-sizing: border-box;
 }
 
+.repolink{
+  margin: 0;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.ftllll{
+  color: rgb(0, 80, 255);
+}
+
 .form-group-1 {
   margin-bottom: 15px;
 }
