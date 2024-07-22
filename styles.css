@@ -615,6 +615,10 @@ body {
   font-size: 13px;
 }
 
+.bold-text {
+  font-weight: 500;
+}
+
 .ftllll{
   color: rgb(0, 80, 255);
 }
