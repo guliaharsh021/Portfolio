@@ -81,9 +81,8 @@
                 <p id="result-message"></p>
                 <button onclick="resetForm()" class="submit-btn">Predict Again</button>
               </div>
-            
+
               <script>
-                // Fetch locations and populate the dropdown
                 fetch('https://project-api-t83x.onrender.com/locations')
                   .then(response => response.json())
                   .then(data => {
@@ -124,7 +123,7 @@
                     const resultMessage = document.getElementById('result-message');
             
                     const formattedPrice = formatPrice(result.predicted_price);
-                    resultMessage.textContent = `The estimated price of your ${data.bhk} BHK ${data.furnishing.toLowerCase()} flat at ${data.location} is ${formattedPrice}`;
+                    resultMessage.textContent = `The predicted price of your ${data.bhk} BHK ${data.furnishing.toLowerCase()} flat in ${data.location} is ${formattedPrice}`;
                     
                     formContainer.style.display = 'none';
                     resultContainer.style.display = 'block';
@@ -144,13 +143,11 @@
                   resultContainer.style.display = 'none';
                 }
             
-                function formatPrice(price) {
-                  if (price >= 10000000) {
-                    return `₹ ${(price / 10000000).toFixed(2)} Crores`;
-                  } else if (price >= 100000) {
-                    return `₹ ${(price / 100000).toFixed(2)} Lakhs`;
+                function formatPrice(priceInLakhs) {
+                  if (priceInLakhs >= 100) { // 1 Crore = 100 Lakhs
+                    return `₹ ${(priceInLakhs / 100).toFixed(2)} Crores`;
                   } else {
-                    return `₹ ${price}`;
+                    return `₹ ${priceInLakhs.toFixed(2)} Lakhs`;
                   }
                 }
               </script>     
