@@ -796,7 +796,6 @@ select {
 .input-row-S input[type="submit"] {
   margin-left: 60px;
   margin-top: 10px;
-  margin-right: 60px;
   background-color: rgb(0, 80, 255); 
   color: rgb(255, 255, 255); 
   padding: 6px 35px;
@@ -806,6 +805,8 @@ select {
   transition: background-color 0.5s;
   font-size: 14px; 
   font-weight: normal; 
+  width: auto; 
+  height: 35px;
 }
 
 .input-row-S input[type="submit"]:hover {
