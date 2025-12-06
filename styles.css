@@ -14,7 +14,6 @@ body {
     left: 0;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    color: #000000;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -32,6 +31,11 @@ body {
     font-weight: 700;
     font-size: 25px;
     margin-left: 60px;
+}
+
+.heading a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .thin-italic{
@@ -144,9 +148,10 @@ body {
     color: black; 
     text-decoration: none;
   }
+  
   .column img{
-    width: 18px;
-    height: 18px;
+    width: 23px;
+    height: 23px;
     object-fit: cover;
   }
 
@@ -229,8 +234,8 @@ body {
   }
 
   .icon-container img{
-    width: 23px;
-    height: 23px;
+    width: 35px;
+    height: 35px;
     margin: 10px;
     object-fit: cover;
   }
