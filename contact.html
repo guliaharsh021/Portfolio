@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">https://symmetrical-telegram-x59v7x9547r9h9vw-5501.app.github.dev/
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +9,40 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     </head>
     <body class="page-background">
-        <header>
-            <div class="header-left">
-              <h1 class="heading">
-                <a href="index.html">
-                  <span class="blue-box">HARSH</span>
-                  <span class="thin-italic"> / Data Analyst</span>
-                </a>
-              </h1>
-            </div>
-            <div class="header-right">
-                <nav>
-                    <a href="index.html" class="button-h">ABOUT ME</a>
-                    <a href="projects.html" class="button-h">PROJECTS</a>
-                    <a href="contact.html" class="button-h">CONTACT</a>
-                </nav>
-            </div>
+        <header class="site-header">
+          <div class="header-left">
+            <h1 class="heading">
+              <a href="index.html">
+                <span class="blue-box">HARSH</span>
+                <span class="thin-italic"> / Data Analyst</span>
+              </a>
+            </h1>
+          </div>
+
+          <!-- Mobile hamburger -->
+          <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Desktop nav -->
+          <div class="header-right">
+            <nav class="desktop-nav">
+              <a href="index.html" class="button-h">ABOUT ME</a>
+              <a href="projects.html" class="button-h">PROJECTS</a>
+              <a href="contact.html" class="button-h">CONTACT</a>
+            </nav>
+          </div>
         </header>
+
+        <!-- Full-screen mobile menu -->
+        <nav class="mobile-nav" id="mobileNav">
+          <button class="menu-close" aria-label="Close navigation">&times;</button>
+          <a href="index.html">ABOUT ME</a>
+          <a href="projects.html">PROJECTS</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
 
         <main>
           <div class="contact-details-container">
@@ -89,5 +106,23 @@
               </div>
             </div>
           </footer>
+          <script>
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav  = document.getElementById('mobileNav');
+            const menuClose  = document.querySelector('.menu-close');
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+
+            function toggleMenu() {
+              mobileNav.classList.toggle('open');
+            }
+
+            if (menuToggle && mobileNav && menuClose) {
+              menuToggle.addEventListener('click', toggleMenu);
+              menuClose.addEventListener('click', toggleMenu);
+              mobileLinks.forEach(link => link.addEventListener('click', () => {
+                mobileNav.classList.remove('open');
+              }));
+            }
+          </script>
     </body>
     </html>
