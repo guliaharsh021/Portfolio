@@ -1286,59 +1286,92 @@ select {
     width: 100%;
   }
 
-  /* ====== CONTACT PAGE ====== */
+/* ====== CONTACT PAGE ====== */
 
+  /* beige background from header to footer for this page */
+  main.contact-main {
+    padding: 0; /* no extra white gaps */
+    background-color: rgb(230, 218, 206);
+  }
+
+  /* wrapper for heading + form */
   .contact-details-container {
     position: relative;
-    width: 100%;
-    height: auto;
-    background-color: rgb(230, 218, 206);
+    max-width: auto;
+    max-height: 1000px;
+    margin: 0 auto;
+    padding: 30px 16px 30px;  /* smaller top padding so less beige gap */
+    box-sizing: border-box;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
     justify-content: center;
     align-items: flex-start;
-    padding: 90px 16px 130px;
-    box-sizing: border-box;
   }
 
+  .empty {
+    display: none;  /* remove extra top space */
+  }
+
+  /* heading: blue square + text on one line, centered */
   .contact-heading {
-    margin-top: 10px;
-    text-align: left;
+    margin-top: 110px;      /* small gap above form */
   }
 
+  /* the blue square */
+  .contact-heading .blue-square {
+    width: 18px;
+    height: 18px;
+    background-color: #0066ff;
+    display: inline-block;
+  }
+
+  /* form card container */
   .contact-container {
     width: 100%;
-    margin: 0;
-    padding: 18px 0 26px;
+    max-width: 650px;  
+    max-height: 550px;      /* nice centered width */
+    margin: 0;          /* center horizontally */
+    padding: 28px 8px 28px;          /* light side padding on mobile */
     box-sizing: border-box;
+    margin-top: 100px;
   }
 
+  .contact-container form {
+    margin-top: 0; 
+  }
+
+  /* form layout */
   .input-row {
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 26px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin: 20px 20px 0;
   }
 
   .input-group {
+    flex: 1;
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .input-group label {
-    margin-bottom: 20px;
+    display: block;
+    margin-bottom: 8px;
     font-size: 14px;
   }
 
   .input-group input,
   .input-group textarea {
+    width: 100%;
     font-size: 14px;
   }
 
   .input-row-S input[type="submit"] {
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
+
+
 
   /* ====== RESUME PAGE (if you use it later) ====== */
 
