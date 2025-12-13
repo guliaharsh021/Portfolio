@@ -1329,11 +1329,19 @@ select {
 
   .dashboard-container {
     width: 70%;
-    max-width: 720px !important;
-    margin: 0 auto !important;
-    overflow: hidden !important;
+    margin-top: 20px;
+    margin-left: 20px;
   }
 
+  .dashboard-container-1 {
+    width: 100%; 
+    max-width: 720px; 
+    margin: 0 auto !important; 
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr !important; 
+    grid-auto-rows: auto auto auto auto !important; 
+  }
   /* ensure the placeholder and embedded object fill the container and have readable height */
   .tableauPlaceholder,
   .tableauPlaceholder object {
@@ -1344,13 +1352,19 @@ select {
   }
 
   /* GitHub link centered under the card */
-  .repolink, .repolink-1 {
+  .repolink {
     text-align: left!important;
     width: 75%;
     margin: 20px;
     margin-top: 310px;
   }
 
+  .repolink-1 {
+    text-align: left!important;
+    width: 75%;
+    margin: 20px;
+    margin-top: 430px;
+  }
 
 
 
