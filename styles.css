@@ -967,7 +967,7 @@ select {
   }
 
   .thin-italic {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .blue-box::before {
@@ -1202,89 +1202,157 @@ select {
     margin: 0px 15px 20px;
   }
 
-  /* ====== PROJECTS PAGE ====== */
+  /* ====== PROJECT PAGE MOBILE FIXES ====== */
+  /* ===== reduce big beige gap and center the section ===== */
+
+  .main-project-container {
+    width: calc(100% - 32px) !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto auto !important;
+    gap: 24px !important;
+  }
 
   .project-details-container {
-    position: relative;
+    padding: 180px 0px 200px !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto auto auto auto !important;
+    row-gap: 50px;
+    height: fit-content;
+  }
+
+
+  /* heading spacing — tighten top & bottom */
+  .project-heading,
+  .section-heading {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    font-size: 30px !important;
+  }
+
+  /* remove empty spacer used for desktop */
+  .empty, .abc {
+    display: none !important;
+  }
+
+  /* hide intro paragraph on mobile */
+  .intro-para {
+    display: none !important;
+  }
+
+  /* ===== PROJECT CARD: use full available width but keep side padding ===== */
+
+  /* content boxes should not exceed viewport and must be centered */
+  .content-box,
+  .content-box-2 {        /* safety cap for larger phones */
+    padding: 0px !important; /* MUCH smaller than desktop-only padding */
+    width: 100% !important;
+  }
+
+
+  /* stack projects vertically and center them */
+  .project-1,
+  .project-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 350px;
+  }
+
+  /* hide Project-1 image on mobile (keeps only left card) */
+  .project-1 .project-img {
+    display: none !important;
+  }
+
+  /* small internal spacing tweaks */
+  .phs {
+    margin-top: 20px;
+    gap: 10px !important;
+  }
+
+  .fppp-1 {
+    font-size: 20px !important; /* smaller so title doesn't overflow */
+    margin: 0 !important;
+  }
+
+  .fppp-2 {
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+
+  /* form elements full width inside the card */
+  .form-container-1 {
+    width: 70% !important;
+    box-sizing: border-box !important;
+    padding: 0px !important;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .form-group-1 {
+    margin-top: 12px;
+    margin-bottom: 12px !important;
     width: 100%;
-    height: auto;
-    background-color: rgb(230, 218, 206);
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 90px 16px 120px;
     box-sizing: border-box;
   }
 
-  .empty,
-  .empty-2 {
-    display: none;
-  }
-
-  .project-heading {
-    margin-top: 10px;
-    text-align: left;
-  }
-
-  .intro-para {
-    width: 100%;
+  .form-group-1 select,
+  .form-group-1 input,
+  .form-group-1 textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     height: auto;
-    text-align: left;
-    font-size: 14px;
   }
 
-  .main-project-container {
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    gap: 24px;
+  input::placeholder {
+    font-size: 12px;
   }
 
-  .project-1,
-  .project-2 {
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr;
+
+  .submit-btn {
+    display: inline-block;
   }
 
-  .content-box,
-  .content-box-2 {
-    width: 100%;
-  }
-
-  .project-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 0 0 5px 5px;
-  }
-
-  .form-container-1,
-  .result-container-1 {
-    width: 100%;
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .dashboard-container-1 {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
+  /* ===== TABLEAU / DASHBOARD ===== */
 
   .dashboard-container {
-    max-width: 100%;
+    width: 70%;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
   }
 
-  .repolink,
-  .repolink-1 {
-    margin-left: 16px;
-    margin-right: 16px;
+  /* ensure the placeholder and embedded object fill the container and have readable height */
+  .tableauPlaceholder,
+  .tableauPlaceholder object {
+    width: 100% !important;
+    min-height: 360px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  .phs {
-    width: 100%;
+  /* GitHub link centered under the card */
+  .repolink, .repolink-1 {
+    text-align: left!important;
+    width: 75%;
+    margin: 20px;
+    margin-top: 310px;
   }
+
+
+
 
 /* ====== CONTACT PAGE ====== */
 
@@ -1314,6 +1382,7 @@ select {
 
   /* heading: blue square + text on one line, centered */
   .contact-heading {
+    font-size: 30px;
     margin-top: 110px;      /* small gap above form */
   }
 
@@ -1371,28 +1440,4 @@ select {
     margin-top: 20px;
   }
 
-
-
-  /* ====== RESUME PAGE (if you use it later) ====== */
-
-  .details-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    padding: 90px 16px 120px;
-    box-sizing: border-box;
-  }
-
-  .education-detail-container,
-  .skills-details-container,
-  .last-container {
-    width: 100%;
-  }
-
-  .table-1,
-  .table-2 {
-    margin-left: 16px;
-  }
 }
